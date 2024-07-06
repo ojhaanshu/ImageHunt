@@ -1,0 +1,20 @@
+@import './colors.css';
+
+.container{
+    display : flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.container .item{
+    padding: 0.55rem;
+}
+
+.container .item:hover{
+    position:relative;
+    top:-4px;
+    left: -4px;
+    box-shadow: 8px 8px 0px 0px var(--darkb);
+}

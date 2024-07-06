@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import './colors.css';
+
+body,h1,h2,h3,h4,h5,h6,p{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Lilita One", sans-serif;
+}
+body{
+background-color: var(--creame);
+min-height: calc(100vh - 5rem);
+width:100%;
+position:absolute;
+padding-bottom: 5rem;
+}
+
+nav{
+    background-color: var(--peach);
+    font-weight: 400;
+  font-style: normal;
+  font-size:x-large;
+  margin-bottom:1rem;
+}
+
+nav .title{
+display:inline-block;
+text-decoration: none;
+color:var(--darkb);
+padding: 0.75rem;
+padding-left: 0px;
+
+}
+nav .logo{
+   
+    margin-left:0.75rem;
+    max-width: 28px;;
+}
+nav form{
+    display:inline-block;
+   float:right;
+
+   padding:1rem;
+
+}
+nav .search{
+    font-family: "Lilita One", sans-serif;
+    padding: 0.25rem 0.75rem;
+}
+
+footer{
+    position:absolute;
+    bottom: 0px;
+    display:flex;
+    flex-wrap: wrap;
+    background-color: var(--peach);
+    width: calc(100% - 1.5rem);
+    justify-content: center;
+    align-items: center;
+    padding:0.25rem;
+}
+@media (max-width :570px){
+    
+
+    nav{
+        display:inline-block;
+        width:100%;
+    }
+    nav form{
+        display:flex;
+        flex-wrap:wrap ;
+       float:none;
+    justify-content: center;
+       padding:1rem;
+       color:red;
+       gap:0.75rem;
+    
+    }
+
+}

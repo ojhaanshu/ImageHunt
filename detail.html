@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+<meta name="viewport" content="width=device-width , initial-scale=1.0" />
+<title> A photo search app</title>
+
+<link rel="stylesheet" href="./assets/common.css" />
+<link rel="stylesheet" href="./assets/detail.css" />
+</head>
+ 
+<body>
+
+    <nav>
+        <a href="./"><img src="./assets/image.png" alt="logo" class="logo" /> </a>
+        <a href="./"><h1 class="title">imageHUNT</h1></a>
+        <form action="./search.html" method="get">
+            <input type="text" name="q" class="search" placeholder="Type Anything" />
+            <input type="submit" value="SEARCH" class="search" /> 
+        </form>
+
+    </nav>
+
+    <section>
+            <div class="detail">
+        <img id="detail_img" />
+        <div class="content">
+            <h1 id="description"></h1>
+            <br/>
+            <h3>Uploaded by - @<span id="username"></span></h3>
+            <br/>
+            <h3>Date -<span id="upload_date"></span></h3>
+            <br/>
+            <h3><span id="likes"></span> Likes (<span id="view_count"></span> Views)</h5>
+            <br/>
+            <br/>
+            <h1 class="description" id="alt_description"></h1>
+            <br/>
+            <br/>
+            <h3>Base color :</h3>
+        
+            <div class="image_color" id="img_color">
+                <span id="color_text"></span>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <a target="_blank" id="download" class="button">DOWNLOAD</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+        <a href="./"><p>ImageHunt</p></a>
+        <h1>|</h1>
+        <p>Developed and Designed by Anshu Ojha</p>
+        <h1>|</h1>
+        <a href="./"><p>Github</p></a>
+        
+            </footer>
+
+    <script src="./assets/common.js"></script>
+    <script src="./assets/detail.js"></script>
+</body>
+
+
+
+</html>
