@@ -1,9 +1,22 @@
-window.onload = function(){
-    fetch(`https://api.unsplash.com/photos?per_page=35&client_id=${api_key}`) .then(convert_to_jason).then(function(data){
-        generateCards(data);
-    });
+let currentPage = 1;
+    const per_page = 30;
 
-}
+window.onload = ()=>{
+    
+   const  get_img = (currentPage)=> { return fetch(`https://api.unsplash.com/photos?page=${currentPage}&per_page=${per_page}&client_id=${api_key}`)
+   .then(response => {
+       if (!response.ok) {
+           throw new Error('Network response was not ok');
+       }
+       return response.json();
+   });
+};
+
+
+
+
+
+
 
 function generateCards(data){
 
@@ -26,4 +39,20 @@ anchor.appendChild(img);
 card.appendChild(anchor);
 container.appendChild(card);
     }
+}
+
+get_img(currentPage).then(generateCards);
+window.addEventListener('scroll',() => {
+    if(window.innerHeight + window.scrollY >= document.body.offsetHeight){
+        currentPage++;
+    
+    get_img(currentPage).then(generateCards)
+    }
+    
+        
+        
+        
+
+ });
+
 }
