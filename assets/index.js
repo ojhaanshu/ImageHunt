@@ -54,8 +54,8 @@ console.log(data);
 }
 
 get_img(currentPage).then(generateCards);
-window.addEventListener('scroll',() => {
-    if(window.innerHeight + window.scrollY >= document.body.offsetHeight){
+window.addEventListener('scroll',debounce(() => {
+    if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 500){
         currentPage++;
     
     get_img(currentPage).then(generateCards)
@@ -65,6 +65,6 @@ window.addEventListener('scroll',() => {
         
         
 
- });
+ },200));
 
 }
