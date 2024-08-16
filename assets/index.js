@@ -29,7 +29,7 @@ console.log(data);
         anchor.href = `./detail.html?id=${one_item.id}`;
 
         card.style.backgroundColor=one_item.color;
-        img.dataset.src = one_item.urls.thumb;
+        img.src = one_item.urls.thumb;
         img.classList.add('lazy');
         anchor.appendChild(img);
         card.appendChild(anchor);
@@ -37,10 +37,11 @@ console.log(data);
     }
     const lazyImages = document.querySelectorAll('img.lazy');
     const imageObserver = new IntersectionObserver((entries,observer) => {
+        console.log(entries);
         entries.forEach(entry => {
             if(entry.isIntersecting){
                 const img = entry.target;
-                img.src = img.dataset.src;
+                img.src = img.src;
                 img.classList.remove('lazy');
                 observer.unobserve(img);
             }
